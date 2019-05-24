@@ -12,4 +12,4 @@ Please see `k8s/` for examples.
 
 ## Screenshot
 
-[![Build Status](docs/sample.png)](https://travis-ci.org/alexfeig/docker_bluegreen)
+![Screenshot](docs/sample.png)
