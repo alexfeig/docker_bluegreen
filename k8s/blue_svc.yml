@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: blue
+  annotations:
+    avi_proxy: |
+      {
+         "virtualservice": {
+              "vip": [{
+              "auto_allocate_floating_ip": true
+              }]
+         }  
+      }
+spec:
+  ports:
+  - name: http 
+    port: 5000
+    targetPort: 5000
+    protocol: TCP
+  selector:
+    app: blue
