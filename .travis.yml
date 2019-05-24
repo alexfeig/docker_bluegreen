@@ -7,7 +7,7 @@ services:
 before_install:
   - pip install pytest pytest-cov pylint
   - docker build -t alexfeig/bluegreen .
-  - docker run -d -p 5000:5000 bluegreen
+  - docker run -d -p 5000:5000 alexfeig/bluegreen
 
 script:
-  - pytest
+  - pytest --cov=bluegreen/ --cov-report=term
