@@ -2,15 +2,6 @@ apiVersion: v1
 kind: Service
 metadata:
   name: blue
-  annotations:
-    avi_proxy: |
-      {
-         "virtualservice": {
-              "vip": [{
-              "auto_allocate_floating_ip": true
-              }]
-         }  
-      }
 spec:
   ports:
   - name: http 
